@@ -6,3 +6,5 @@
 3. Func2: Generate a plot of the mean temperature against year.
 
 4. Func3: Generate a plot of which day is the warmest day of the year.
+
+Verion 1 of the code will only use the data from Uppsala. If there is time, future verisons will be able to read from multiple files.
