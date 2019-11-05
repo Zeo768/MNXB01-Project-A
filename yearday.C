@@ -30,9 +30,11 @@ month::month():TObject(),fMonth(-1){}
 class day : public TObject{
 	public:
 	Int_t fDay;
+	Double_t fAvgTemp;
+	Double_t fAvgTempCor;
 	day();
 	ClassDef(day, 1);
 };
 ClassImp(day)
-day::day():TObject(),fDay(-1){}
+day::day():TObject(),fDay(-1), fAvgTemp(-1), fAvgTempCor(-1){}
 #endif
