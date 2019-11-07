@@ -32,6 +32,13 @@
 ./GraphSpring_C.so: /usr/include/root/TArrayD.h /usr/include/root/TArray.h
 ./GraphSpring_C.so: /usr/include/root/TFrame.h /usr/include/root/TWbox.h
 ./GraphSpring_C.so: /usr/include/root/TBox.h /usr/include/root/TColor.h
-./GraphSpring_C.so: /usr/include/root/TArrayI.h
+./GraphSpring_C.so: /usr/include/root/TArrayI.h /usr/include/root/TF1.h
+./GraphSpring_C.so: /usr/include/root/TFormula.h /usr/include/root/TBits.h
+./GraphSpring_C.so: /usr/include/root/TObjArray.h
+./GraphSpring_C.so: /usr/include/root/TSeqCollection.h
+./GraphSpring_C.so: /usr/include/root/TCollection.h
+./GraphSpring_C.so: /usr/include/root/TIterator.h
+./GraphSpring_C.so: /usr/include/root/Math/ParamFunctor.h
+./GraphSpring_C.so: /usr/include/root/TLegend.h /usr/include/root/TPave.h
 ./GraphSpring_C.so: /usr/include/root/cintdictversion.h /usr/include/root/RVersion.h
 GraphSpring_C__ROOTBUILDVERSION= 5.34/30

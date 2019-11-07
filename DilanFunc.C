@@ -21,12 +21,6 @@ void FindSpringStart(){
 				if (AvgTempCor[i][j][k]>0 && j > 1 && j < 6){
 					if ((j == 2 && k > 14) || j !=2 ){
 						for(Int_t ch = 0; ch < 100; ch++){
-							/*if (k+ch > 32){
-								k=1;
-								ch=0;
-								j++;
-							}
-							*/
 							if(AvgTempCor[i][j][k+ch] == -273.0 && i > 1721){
 								//Fix this logic, but it works, so i dont know...
 							} else if(AvgTempCor[i][j][k+ch]>0){
