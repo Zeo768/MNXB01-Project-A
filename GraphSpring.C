@@ -62,7 +62,6 @@ void GraphSpring(){
 		fa1->SetTitle(s);
 		gr->Fit(fa1,"Q+");
 		legend->AddEntry(fa1,s,"l");
-		//gr->Draw("SAME");
 	}
 	legend->Draw();
 
