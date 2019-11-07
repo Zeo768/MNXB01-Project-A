@@ -6,7 +6,7 @@ using namespace std;
 	Double_t AvgTempCor[2014][13][32]; // 3D-array for corrected temperature
 void read3Darray();
 void read3Darray(){
-	ifstream data("/home/jim/MNXB01/project/MNXB01-project/MNXB01-Project-A/datasets/uppsala_tm_1722-2013.dat");
+	ifstream data("datasets/uppsala_tm_1722-2013.dat");
 	if(!data){
 	cout << "Error: could not read from file" << endl;
 	}
