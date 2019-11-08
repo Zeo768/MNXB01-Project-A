@@ -17,12 +17,10 @@ void read3Darray(){
 	Double_t nAvgTemp; // Placeholder for average temperature of read day
 	Double_t nAvgTempCor; // Placeholder for corrected average temperature
 	Int_t nDataId; // Id number identifing where measurement was taken
-	Int_t preyear = 0; // previous year check
-	Int_t count = 0; // Count for how many years
-	for (Int_t i = 0; i < 2014; i++){
-		for (Int_t j = 0; j < 13; j++){
-			for (Int_t k = 0; k < 32; k++){
-				AvgTempCor[i][j][k] = -273.0; // Fill all elements with unreal temperature
+	for (Int_t year = 0; year < 2014; year++){
+		for (Int_t month = 0; month < 13; month++){
+			for (Int_t day = 0; day < 32; day++){
+				AvgTempCor[year][month][day] = -273.0; // Fill all elements with unreal temperature
 			}
 		}
 	}
