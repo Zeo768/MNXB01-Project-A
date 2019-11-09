@@ -1,9 +1,9 @@
 
 # DO NOT DELETE
 
-./GraphSpring_C.so: DilanFunc.C read3Darray.C /usr/include/root/TString.h
-./GraphSpring_C.so: /usr/include/root/Riosfwd.h /usr/include/root/RConfig.h
-./GraphSpring_C.so: /usr/include/root/RVersion.h
+./GraphSpring_C.so: FindSpringStart.C read3Darray.C
+./GraphSpring_C.so: /usr/include/root/TString.h /usr/include/root/Riosfwd.h
+./GraphSpring_C.so: /usr/include/root/RConfig.h /usr/include/root/RVersion.h
 ./GraphSpring_C.so: /usr/include/root/TMathBase.h /usr/include/root/Rtypes.h
 ./GraphSpring_C.so: /usr/include/root/DllImport.h
 ./GraphSpring_C.so: /usr/include/root/Rtypeinfo.h

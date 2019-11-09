@@ -5,8 +5,8 @@
 
 using namespace std;
 
-Int_t SpringDay[2014];		//Array of days, of when spring starts
-Int_t SpringMonth[2014];	//Array of months, of when spring starts
+Int_t SpringDay[291];		//Array of days, of when spring starts
+Int_t SpringMonth[291];		//Array of months, of when spring starts
 TString sD, sM;				//Placeholder strings for dates
 
 void FindSpringStart();
@@ -15,17 +15,17 @@ void FindSpringStart(){		//Main func
 	Int_t dayCount;			//Kepps track of consecutive days with temp above 0
 	Bool_t spring;			//Used to break out of loop, when daycount is 7
 	
-	for (Int_t i = 0, ii = 0; i < 2014; i++){		//Loop through years
+	for (Int_t i = 0, ii = 0; i < 291; i++){		//Loop through years
 		dayCount = 0;								//Init both variables
 		spring = false;
 		for (Int_t j = 0; j < 13; j++){				//Loop through months
 			for (Int_t k = 0; k < 32; k++, ii++){	//Loop through days
-				if (AvgTempCor[i][j][k]>0 && j > 1 && j < 6){		//If current day temp is above 0 and between month 2 and 5
+				if (AvgTempCor[i+1722][j][k]>0 && j > 1 && j < 6){		//If current day temp is above 0 and between month 2 and 5
 					if ((j == 2 && k > 14) || j !=2 ){				//If month 2, then days must be over 15 acc. to SMHI
 						for(Int_t ch = 0; ch < 30; ch++){			//Loops from the first day above 0 temp to find consecutive days
-							if(AvgTempCor[i][j][k+ch] == -273.0 && i > 1721){	//Correction for empty values in 3D array
+							if(AvgTempCor[i+1722][j][k+ch] == -273.0){	//Correction for empty values in 3D array
 								//Continue
-							} else if(AvgTempCor[i][j][k+ch]>0){	//If temp of current day is above 0
+							} else if(AvgTempCor[i+1722][j][k+ch]>0){	//If temp of current day is above 0
 								dayCount += 1;						//Add 1 to daycount
 								if(dayCount >= 7){					//If daycount >=7, we have spring
 									spring = true;					//Spring is true

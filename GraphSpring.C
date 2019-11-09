@@ -1,7 +1,7 @@
 // Author: Dilan
 #include <iostream>			//Include standard
 #include <fstream>
-#include "DilanFunc.C"		//Include the Spring start arrays
+#include "FindSpringStart.C"		//Include the Spring start arrays
 //#include "TString.h"
 #include "TCanvas.h"
 #include "TDatime.h"
@@ -24,7 +24,7 @@ void GraphSpring(){
 	for (Int_t i = 0; i < n; i++) {		//Fills x-axis with years, 1722-2013
 		x[i] = i+1722;
 		//Sets da1 to the spring start of year i, but replaced the year with 2000 so every date is in the same year
-		da1.Set(2000,SpringMonth[i+1722],SpringDay[i+1722],0,0,0);		
+		da1.Set(2000,SpringMonth[i],SpringDay[i],0,0,0);		
 		y[i] = da1.Convert();			//Fills y-axis with spring start dates
 	}
 	
@@ -42,7 +42,7 @@ void GraphSpring(){
 	gr->GetYaxis()->SetTimeFormat("%m/%d");				//Set time format
 	gr->GetYaxis()->SetTitle("Dates (Month/Day)");
 	gr->GetYaxis()->CenterTitle();
-	gr->SetMaximum(960768000);							//Set limits of y-axis
+	gr->SetMaximum(960768000);							//Set limits of y-axis (Unix Time Stamp)
 	gr->SetMinimum(949363200);
 	gr->Draw("AP");										//Draw all data points
    
