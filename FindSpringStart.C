@@ -1,4 +1,6 @@
 // Author: Dilan
+#ifndef FINDSPRINGSTART_C
+#define FINDSPRINGSTART_C
 #include <iostream>
 #include "read3Darray.C"	//include the 3D array
 #include "TString.h"		//Include strings, used for returning dates
@@ -57,3 +59,4 @@ void FindSpringStart(){		//Main func
 		}
 	}
 }
+#endif
